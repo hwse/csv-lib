@@ -8,13 +8,9 @@
 #define CSV_LIB_LIBRARY_H
 
 namespace csv {
-    class row {
-    public:
-        std::vector<std::string> cells;
-    };
+    typedef std::vector<std::string> row;
 
-    class table {
-    public:
+    struct table {
         std::vector<row> rows;
         bool has_header;
 
@@ -25,7 +21,6 @@ namespace csv {
     };
 
     table read(std::istream &stream, char delimiter = ';', bool has_header = false);
-
 }
 
 

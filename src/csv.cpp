@@ -24,7 +24,7 @@ csv::table csv::read(std::istream& stream, char delimiter, bool has_header) {
         csv::row r;
         std::istringstream line_stream(line);
         for(std::string cell; std::getline(line_stream, cell, delimiter);) {
-            r.cells.emplace_back(cell);
+            r.emplace_back(cell);
         }
         result.emplace_back(r);
     }
