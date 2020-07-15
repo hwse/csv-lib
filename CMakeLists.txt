@@ -3,7 +3,7 @@ project(csv_lib LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_library(csv_lib src/csv.cpp include/csv.h)
+add_library(csv_lib src/csv.cpp)
 target_include_directories(csv_lib PUBLIC include)
 target_compile_features(csv_lib PUBLIC cxx_std_17)
 
